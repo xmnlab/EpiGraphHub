@@ -44,7 +44,7 @@ CREATE SCHEMA switzerland;
 ALTER SCHEMA switzerland OWNER TO dev_admin;
 
 --
--- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner:
 --
 
 CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
@@ -58,7 +58,7 @@ COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
 
 
 --
--- Name: plpython3u; Type: EXTENSION; Schema: -; Owner: 
+-- Name: plpython3u; Type: EXTENSION; Schema: -; Owner:
 --
 
 CREATE EXTENSION IF NOT EXISTS plpython3u WITH SCHEMA pg_catalog;
@@ -107,10 +107,25 @@ CREATE EXTENSION IF NOT EXISTS postgis WITH SCHEMA public;
 
 
 --
--- Name: EXTENSION postgis; Type: COMMENT; Schema: -; Owner: 
+-- Name: EXTENSION postgis; Type: COMMENT; Schema: -; Owner:
 --
 
 COMMENT ON EXTENSION postgis IS 'PostGIS geometry, geography, and raster spatial types and functions';
+
+
+--
+-- Name: postgis_raster; Type: EXTENSION; Schema: -; Owner:
+--
+
+CREATE EXTENSION IF NOT EXISTS postgis_raster WITH SCHEMA public;
+
+
+--
+-- Name: EXTENSION postgis_raster; Type: COMMENT; Schema: -; Owner:
+--
+
+COMMENT ON EXTENSION postgis_raster IS 'PostGIS geometry, geography, and raster spatial types and functions';
+
 
 
 SET default_tablespace = '';
@@ -28684,7 +28699,6 @@ GRANT SELECT ON TABLE public.iso_alpha3_country_codes TO dev_external;
 --
 
 GRANT SELECT ON TABLE public.raster_columns TO dev_external;
-
 
 --
 -- Name: TABLE raster_overviews; Type: ACL; Schema: public; Owner: postgres
