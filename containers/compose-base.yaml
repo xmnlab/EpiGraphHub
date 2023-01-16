@@ -129,6 +129,7 @@ services:
 
   minio:
     image: quay.io/minio/minio
+    hostname: minio
     restart: unless-stopped
     env_file:
       - ../.env
